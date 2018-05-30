@@ -118,10 +118,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+# 4.Congiuro mi bd y modelos
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-#4.Congiuro mi bd y modelos
