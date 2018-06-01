@@ -4,12 +4,12 @@ from django.template import loader
 from django.urls import reverse
 from .models import Question,Choice
 
-
-#1.Creo la vista es decir na funcion
+#1.Creo la vista es decir una funcion
 # Create your views here.
 def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    context = {'latest_question_list': latest_question_list}
+    
+    latest_question_lis = Question.objects.order_by('-pub_date')[:5]
+    context = {'latest_question_list': latest_question_lis}
     return render(request, 'polls/index.html', context)
 
 def detail(request, question_id):
@@ -37,3 +37,4 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:resultado', args=(question.id,)))
+
